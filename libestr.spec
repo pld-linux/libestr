@@ -5,12 +5,12 @@
 Summary:	Some essential string manipulation functions
 Summary(pl.UTF-8):	Kilka podstawowych funkcji do manipulacji łańcuchami
 Name:		libestr
-Version:	0.1.2
+Version:	0.1.10
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://libestr.adiscon.com/files/download/%{name}-%{version}.tar.gz
-# Source0-md5:	30ec4054155dc7d7e9b06418181c4f12
+# Source0-md5:	f4c9165a23587e77f7efe65d676d5e8e
 URL:		http://libestr.adiscon.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -52,10 +52,6 @@ Statyczna biblioteka libestr.
 %setup -q
 
 %build
-%{__aclocal} -I m4
-%{__autoconf}
-%{__autoheader}
-%{__automake}
 %configure \
 	--disable-silent-rules \
 	%{!?with_static_libs:--disable-static}
